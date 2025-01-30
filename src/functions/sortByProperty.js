@@ -6,10 +6,8 @@ export default function sortByProperty(object, propertySortOrder) {
   const otherProperties = [];
 
   for (const property in object) {
-    if (Object.prototype.hasOwnProperty.call(object, property)) {
-      if (!propertySortOrder.includes(property)) {
-        otherProperties.push({ key: property, value: object[property] });
-      }
+    if (!propertySortOrder.includes(property)) {
+      otherProperties.push({ key: property, value: object[property] });
     }
   }
 
